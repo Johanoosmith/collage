@@ -1,4 +1,4 @@
-Collage
+Collage testte
 =======
 teztin
 jQuery plugin to display a images as a collage.
