@@ -1,0 +1,49 @@
+<!-- Welcome section starts -->
+{{ 'owl.carousel.css' | asset_url | stylesheet_tag }}
+{{ 'jquery.min.js' | asset_url | script_tag }}
+  {{ 'owl.carousel.js' | asset_url | script_tag }}
+<section class="imagesslider">
+<div class="container">
+  <div id="owl-demo" class="owl-carousel owl-theme">
+
+      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage1.jpg?15259394755119812233" alt="The Last of us"></div>
+      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage2.jpg?15259394755119812233" alt="GTA V"></div>
+      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage3.jpg?15259394755119812233" alt="Mirror Edge"></div>
+      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage1.jpg?15259394755119812233" alt="The Last of us"></div>
+      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage2.jpg?15259394755119812233" alt="GTA V"></div>
+      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage3.jpg?15259394755119812233" alt="Mirror Edge"></div>
+    <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage1.jpg?15259394755119812233" alt="The Last of us"></div>
+      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage2.jpg?15259394755119812233" alt="GTA V"></div>
+      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage3.jpg?15259394755119812233" alt="Mirror Edge"></div>
+    </div>
+  </div>
+</section>
+<!-- Welcome section ends -->
+{% schema %}
+{
+"name": "Section name",
+"settings": [],
+"presets": [
+{
+"name": "Custom slider"
+
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+    jQuery(document).ready(function() {
+      jQuery("#owl-demo").owlCarousel({
+
+      loop:true,
+    margin:10,
+    nav:true,
+
+
+
+      });
+    });
+{% endjavascript %}
+
