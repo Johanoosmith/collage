@@ -1,6 +1,6 @@
 Collage 
 =======
-
+CollageCollageCollageCollageCollageCollageCollage
 Collage  Collage Collagedgdsfgfgs yuiui77y
 
 jQuery plugin to display a images as a collage.
