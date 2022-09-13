@@ -11,27 +11,15 @@
     <div id="owl-demo-testimonial" class="owl-carousel owl-theme">
         <div>
             {% for block in section.blocks %}
-              <div class="custom-testimonial">
                 {% if block.settings.image != blank %}
-                  <div class="images"><img src="{{ block.settings.image | img_url: 'large' }}" id="hero-header" class="relative z-0"/>
-                  </div>
+                <div id="hero-header" class="relative z-0" style="height: 50px; background-size: cover; background-position: center ;background-image: url('{{ block.settings.image | image_url: width: 50, crop: "center" }}');">
+                </div>
                 {% endif %}
-                {% if block.settings.authername != blank %}
-                    <div class="auther-name">
-                            {{ block.settings.authername}}
-                    </div>
-                {% endif %}
-                 {% if block.settings.designation != blank %}
-                    <div class="designation">
-                            {{ block.settings.designation}}
-                    </div>
-                {% endif %}
-                {% if block.settings.description != blank %}
+                {% if block.settings.review != blank %}
                     <div class="description">
-                            {{ block.settings.description}}
+                            {{ block.settings.review}}
                     </div>
                 {% endif %}
-        </div>
             {% endfor %}
         </div>
     </div>
@@ -62,19 +50,9 @@
           "label": "Image"
        },
        {
-        "type":"text",
-        "id":"authername",
-        "label":"Auther name"
-    },
-    {
-        "type":"text",
-        "id":"designation",
-        "label":"Designation"
-    },
-    {
         "type":"richtext",
-        "id":"description",
-        "label":"Description"
+        "id":"review",
+        "label":"reviews"
     }
     ]
  }
@@ -97,15 +75,13 @@
 {% javascript %}
     jQuery(document).ready(function() {
       jQuery("#owl-demo-testimonial").owlCarousel({
-        autoplay: true,
-        autoplaySpeed: 1000,
-        speed: 600,
-        draggable: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: true
+
+        loop:true,
+        margin:10,
+        nav:true,
+        items:1
+
+
       });
     });
 {% endjavascript %}
