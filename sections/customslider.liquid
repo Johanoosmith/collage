@@ -20,7 +20,11 @@
                             {{ block.settings.authername}}
                     </div>
                 {% endif %}
-
+                 {% if block.settings.designation != blank %}
+                    <div class="designation">
+                            {{ block.settings.designation}}
+                    </div>
+                {% endif %}
                 {% if block.settings.description != blank %}
                     <div class="description">
                             {{ block.settings.description}}
@@ -56,9 +60,14 @@
           "label": "Image"
        },
        {
-        "type":"richtext",
+        "type":"text",
         "id":"authername",
         "label":"Auther name"
+    },
+    {
+        "type":"text",
+        "id":"designation",
+        "label":"Designation"
     },
     {
         "type":"richtext",
