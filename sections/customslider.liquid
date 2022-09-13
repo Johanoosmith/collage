@@ -13,11 +13,20 @@
                 {% if block.settings.image != blank %}
                 <div id="hero-header" class="relative z-0">
                   <img src="{{ block.settings.image | img_url: 'large' }}" />
-                
                 {% endif %}
-                {% if block.settings.review != blank %}
+                  {% if block.settings.authername != blank %}
+                    <div class="auther-name">
+                            {{ block.settings.authername}}
+                    </div>
+                {% endif %}
+                 {% if block.settings.designation != blank %}
+                    <div class="designation">
+                            {{ block.settings.designation}}
+                    </div>
+                {% endif %}
+                {% if block.settings.description != blank %}
                     <div class="description">
-                            {{ block.settings.review}}
+                            {{ block.settings.description}}
                     </div>
                 {% endif %}
               </div>
@@ -51,9 +60,19 @@
           "label": "Image"
        },
        {
+        "type":"text",
+        "id":"authername",
+        "label":"Auther name"
+    },
+    {
+        "type":"text",
+        "id":"designation",
+        "label":"Designation"
+    },
+    {
         "type":"richtext",
-        "id":"review",
-        "label":"reviews"
+        "id":"description",
+        "label":"Description"
     }
     ]
  }
