@@ -468,7 +468,8 @@
           "type": "Tesimonialss",
           "settings": {
             "image": "shopify:\/\/shop_images\/download_1.jpg",
-            "authername": "<p>Ray cater<\/p>",
+            "authername": "Ray cater",
+            "designation": "Manager",
             "description": "<p>Under testing Under testing Under testingUnder testingUnder testingUnder testing <\/p>"
           }
         },
@@ -476,6 +477,7 @@
           "type": "Tesimonialss",
           "settings": {
             "authername": "",
+            "designation": "",
             "description": ""
           }
         }
