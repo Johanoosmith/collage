@@ -476,9 +476,10 @@
         "b41f7154-edfc-426d-a503-bb00c78515b1": {
           "type": "Tesimonialss",
           "settings": {
-            "authername": "",
-            "designation": "",
-            "description": ""
+            "image": "shopify:\/\/shop_images\/download.jpg",
+            "authername": "Johan smith",
+            "designation": "Co-FOUNDER",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.<\/p>"
           }
         }
       },
