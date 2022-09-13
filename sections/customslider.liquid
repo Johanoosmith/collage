@@ -11,6 +11,7 @@
     <div id="owl-demo-testimonial" class="owl-carousel owl-theme">
         <div>
             {% for block in section.blocks %}
+              <div class="custom-testimonial">
                 {% if block.settings.image != blank %}
                   <div class="images"><img src="{{ block.settings.image | img_url: 'large' }}" id="hero-header" class="relative z-0"/>
                   </div>
@@ -30,6 +31,7 @@
                             {{ block.settings.description}}
                     </div>
                 {% endif %}
+        </div>
             {% endfor %}
         </div>
     </div>
