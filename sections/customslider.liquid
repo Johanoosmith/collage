@@ -31,13 +31,17 @@
                             {{ block.settings.description}}
                     </div>
                 {% endif %}
+                {% section 'buttons' %}
+
         </div>
             {% endfor %}
+
         
     </div>
   </div>
 </section>
 <!-- Welcome section ends -->
+
 {% schema %}
 {
 "name": "Testimonial slider",
@@ -52,7 +56,8 @@
 "blocks": [{
     "type": "Tesimonialss",
     "name": "Testimonial",
-    "settings": [{
+    "settings": [
+        {
           "type": "header",
           "content": "Testimonial Image"
        },
@@ -65,7 +70,7 @@
         "type":"text",
         "id":"authername",
         "label":"Auther name"
-    },
+        },
     {
         "type":"text",
         "id":"designation",
@@ -79,6 +84,7 @@
     ]
  }
 ],
+  
 "presets": [
 {
 "name": "Testimonial slider",
@@ -92,6 +98,8 @@
 ]
 }
 {% endschema %}
+
+
 {% stylesheet %}
 {% endstylesheet %}
 {% javascript %}
