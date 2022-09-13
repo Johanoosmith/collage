@@ -12,7 +12,7 @@
         <div>
             {% for block in section.blocks %}
                 {% if block.settings.image != blank %}
-                <div id="hero-header" class="relative z-0" style="height: 1111px; width:1100px; background-size: cover; background-position: center ;background-image: url('{{ block.settings.image | image_url }}');">
+                <div id="hero-header" class="relative z-0" style="background-image: url('{{ block.settings.image | image_url }}');">
                 </div>
                 {% endif %}
                 {% if block.settings.authername != blank %}
