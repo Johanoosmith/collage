@@ -10,8 +10,9 @@
     </div>
     <div id="owl-demo-testimonial" class="owl-carousel owl-theme">
             {% for block in section.blocks %}
-                {% if block.settings.image != blank %}
+                
                 <div id="hero-header" class="relative z-0">
+                  {% if block.settings.image != blank %}
                   <img src="{{ block.settings.image | img_url: 'large' }}" />
                 {% endif %}
                   {% if block.settings.authername != blank %}
