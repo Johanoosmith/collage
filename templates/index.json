@@ -477,11 +477,19 @@
             "image": "shopify:\/\/shop_images\/download.jpg",
             "review": "<p>cghfgjhfg<\/p>"
           }
+        },
+        "61941b83-75a2-499c-b87c-372d4addf780": {
+          "type": "Tesimonialss",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_6.png",
+            "review": "<p>cfghgjgffjf<\/p>"
+          }
         }
       },
       "block_order": [
         "1663045917c416e774-0",
-        "b41f7154-edfc-426d-a503-bb00c78515b1"
+        "b41f7154-edfc-426d-a503-bb00c78515b1",
+        "61941b83-75a2-499c-b87c-372d4addf780"
       ],
       "settings": {
         "section-heading": "New Slider"
