@@ -467,14 +467,16 @@
         "1663045917c416e774-0": {
           "type": "Tesimonialss",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
-            "review": "<p><strong>Testing Testing Testing Testing Testing.<\/strong><\/p>"
+            "image": "shopify:\/\/shop_images\/download_1.jpg",
+            "authername": "<p>Ray cater<\/p>",
+            "description": "<p>Under testing Under testing Under testingUnder testingUnder testingUnder testing <\/p>"
           }
         },
         "b41f7154-edfc-426d-a503-bb00c78515b1": {
           "type": "Tesimonialss",
           "settings": {
-            "review": ""
+            "authername": "",
+            "description": ""
           }
         }
       },
