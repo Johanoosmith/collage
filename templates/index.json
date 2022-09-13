@@ -495,7 +495,8 @@
           "type": "other-block",
           "settings": {
             "image": "shopify:\/\/shop_images\/bikes-take-the-turn.jpg",
-            "customtext": "Multiple block call in single section"
+            "link": "shopify:\/\/products\/face-wash",
+            "linktext": "Click Here"
           }
         }
       },
