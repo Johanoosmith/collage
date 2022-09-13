@@ -490,12 +490,19 @@
             "designation": "CO-FOUNDER",
             "description": "<p><strong>Lorem Ipsum <\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<\/p>"
           }
+        },
+        "e3559c60-bfc8-4783-8c7e-9b8c0fbdfcdb": {
+          "type": "block-2",
+          "settings": {
+            "title": "testing"
+          }
         }
       },
       "block_order": [
         "1663045917c416e774-0",
         "b41f7154-edfc-426d-a503-bb00c78515b1",
-        "61941b83-75a2-499c-b87c-372d4addf780"
+        "61941b83-75a2-499c-b87c-372d4addf780",
+        "e3559c60-bfc8-4783-8c7e-9b8c0fbdfcdb"
       ],
       "settings": {
         "section-heading": "New Slider"
