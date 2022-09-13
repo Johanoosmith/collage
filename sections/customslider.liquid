@@ -4,37 +4,40 @@
 {{ 'owl.carousel.js' | asset_url | script_tag }}
 <section class="imagesslider">
 <div class="container">
-    <div class="heading-section"> {% if section.settings.section-heading != blank %}
+    <div class="heading-section"> 
+        {% if section.settings.section-heading != blank %}
         <h2 class="section-heading" style="text-align: center;">{{ section.settings.section-heading }}</h2>
         {% endif %} 
     </div>
     <div id="owl-demo-testimonial" class="owl-carousel owl-theme">
        
             {% for block in section.blocks %}
-              <div class="custom-testimonial">
-                {% if block.settings.image != blank %}
-                  <div class="images"><img src="{{ block.settings.image | img_url: 'large' }}" id="hero-header" class="relative z-0"/>
-                  </div>
-                {% endif %}
-                {% if block.settings.authername != blank %}
-                    <div class="auther-name">
-                            {{ block.settings.authername}}
+                {% if block.type == 'Tesimonialss' %}
+                <div class="custom-testimonial">
+                    {% if block.settings.image != blank %}
+                    <div class="images"><img src="{{ block.settings.image | img_url: 'large' }}" id="hero-header" class="relative z-0"/>
                     </div>
-                {% endif %}
-                 {% if block.settings.designation != blank %}
-                    <div class="designation">
-                            {{ block.settings.designation}}
+                    {% endif %}
+                    {% if block.settings.authername != blank %}
+                        <div class="auther-name">
+                                {{ block.settings.authername}}
+                        </div>
+                    {% endif %}
+                    {% if block.settings.designation != blank %}
+                        <div class="designation">
+                                {{ block.settings.designation}}
+                        </div>
+                    {% endif %}
+                    {% if block.settings.description != blank %}
+                        <div class="description">
+                                {{ block.settings.description}}
+                        </div>
+                    {% endif %}
                     </div>
+                {% elsif block.type == 'block-2' %}
+                <h3>{{block.title}}</h3>
                 {% endif %}
-                {% if block.settings.description != blank %}
-                    <div class="description">
-                            {{ block.settings.description}}
-                    </div>
-                {% endif %}
-                {% section 'buttons' %}
-
-        </div>
-            {% endfor %}
+           {% endfor %}
 
         
     </div>
@@ -53,38 +56,49 @@
         }
 ],
 "max_blocks": 5,
-"blocks": [{
-    "type": "Tesimonialss",
-    "name": "Testimonial",
-    "settings": [
-        {
-          "type": "header",
-          "content": "Testimonial Image"
-       },
-       {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-       },
-       {
-        "type":"text",
-        "id":"authername",
-        "label":"Auther name"
-        },
+"blocks": [
     {
-        "type":"text",
-        "id":"designation",
-        "label":"Designation"
+        "type": "Tesimonialss",
+        "name": "Testimonial",
+        "settings": [
+            {
+            "type": "header",
+            "content": "Testimonial Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type":"text",
+            "id":"authername",
+            "label":"Auther name"
+            },
+        {
+            "type":"text",
+            "id":"designation",
+            "label":"Designation"
+        },
+        {
+            "type":"richtext",
+            "id":"description",
+            "label":"Description"
+        }
+        ]
     },
     {
-        "type":"richtext",
-        "id":"description",
-        "label":"Description"
-    }
-    ]
- }
+        "type": "block-2",
+        "name": "Block 2",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }
+        ]
+      }
 ],
-  
 "presets": [
 {
 "name": "Testimonial slider",
@@ -98,7 +112,6 @@
 ]
 }
 {% endschema %}
-
 
 {% stylesheet %}
 {% endstylesheet %}
