@@ -15,9 +15,15 @@
                 <div id="hero-header" class="relative z-0" style="height: 50px; background-size: cover; background-position: center ;background-image: url('{{ block.settings.image | image_url: width: 50, crop: "center" }}');">
                 </div>
                 {% endif %}
-                {% if block.settings.review != blank %}
+                {% if block.settings.authername != blank %}
+                    <div class="auther-name">
+                            {{ block.settings.authername}}
+                    </div>
+                {% endif %}
+
+                {% if block.settings.description != blank %}
                     <div class="description">
-                            {{ block.settings.review}}
+                            {{ block.settings.description}}
                     </div>
                 {% endif %}
             {% endfor %}
@@ -51,8 +57,13 @@
        },
        {
         "type":"richtext",
-        "id":"review",
-        "label":"reviews"
+        "id":"authername",
+        "label":"Auther name"
+    },
+    {
+        "type":"richtext",
+        "id":"description",
+        "label":"Description"
     }
     ]
  }
