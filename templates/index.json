@@ -486,12 +486,6 @@
         "section-heading": "New Slider"
       }
     },
-    "16626447397ced9e76": {
-      "type": "customslider",
-      "settings": {
-        "section-heading": "New slider"
-      }
-    },
     "featured-blog": {
       "type": "featured-blog",
       "settings": {
@@ -556,7 +550,6 @@
     "rich-text",
     "multicolumn-1",
     "16630459177ebb198e",
-    "16626447397ced9e76",
     "featured-blog",
     "newsletter"
   ]
