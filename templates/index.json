@@ -461,6 +461,31 @@
         "padding_bottom": 60
       }
     },
+    "16630459177ebb198e": {
+      "type": "customslider",
+      "blocks": {
+        "1663045917c416e774-0": {
+          "type": "Tesimonialss",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
+            "review": "<p><strong>Testing Testing Testing Testing Testing.<\/strong><\/p>"
+          }
+        },
+        "b41f7154-edfc-426d-a503-bb00c78515b1": {
+          "type": "Tesimonialss",
+          "settings": {
+            "review": ""
+          }
+        }
+      },
+      "block_order": [
+        "1663045917c416e774-0",
+        "b41f7154-edfc-426d-a503-bb00c78515b1"
+      ],
+      "settings": {
+        "section-heading": ""
+      }
+    },
     "16626447397ced9e76": {
       "type": "customslider",
       "settings": {
@@ -517,31 +542,6 @@
         "padding_top": 60,
         "padding_bottom": 0
       }
-    },
-    "16630459177ebb198e": {
-      "type": "customslider",
-      "blocks": {
-        "1663045917c416e774-0": {
-          "type": "Tesimonialss",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
-            "review": "<p><strong>Testing Testing Testing Testing Testing.<\/strong><\/p>"
-          }
-        },
-        "b41f7154-edfc-426d-a503-bb00c78515b1": {
-          "type": "Tesimonialss",
-          "settings": {
-            "review": ""
-          }
-        }
-      },
-      "block_order": [
-        "1663045917c416e774-0",
-        "b41f7154-edfc-426d-a503-bb00c78515b1"
-      ],
-      "settings": {
-        "section-heading": ""
-      }
     }
   },
   "order": [
@@ -555,9 +555,9 @@
     "featured-collection-1",
     "rich-text",
     "multicolumn-1",
+    "16630459177ebb198e",
     "16626447397ced9e76",
     "featured-blog",
-    "newsletter",
-    "16630459177ebb198e"
+    "newsletter"
   ]
 }
