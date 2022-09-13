@@ -34,8 +34,11 @@
                         </div>
                     {% endif %}
                     </div>
-                {% elsif block.type == 'block-2' %}
-                <h3>{{block.settings.title}}</h3>
+                {% elsif block.type == 'other-block' %}
+                {% if block.settings.image != blank %}
+                    <div class="other-block-images"><img src="{{ block.settings.image | img_url: 'large' }}" id="hero-header" class="relative z-0"/>
+                    </div>
+                {% endif %}
                 {% endif %}
            {% endfor %}
 
@@ -88,14 +91,14 @@
         ]
     },
     {
-        "type": "block-2",
-        "name": "Block 2",
+        "type": "other-block",
+        "name": "Custom Block",
         "settings": [
           {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-          }
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
         ]
       }
 ],
