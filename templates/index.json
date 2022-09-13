@@ -494,7 +494,8 @@
         "5ea94170-a6ec-4944-9400-5a6800c6d79b": {
           "type": "other-block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bikes-take-the-turn.jpg"
+            "image": "shopify:\/\/shop_images\/bikes-take-the-turn.jpg",
+            "customtext": "Multiple block call in single section"
           }
         }
       },
