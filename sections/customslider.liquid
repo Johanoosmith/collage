@@ -13,13 +13,14 @@
                 {% if block.settings.image != blank %}
                 <div id="hero-header" class="relative z-0">
                   <img src="{{ block.settings.image | img_url: 'large' }}" />
-                </div>
+                
                 {% endif %}
                 {% if block.settings.review != blank %}
                     <div class="description">
                             {{ block.settings.review}}
                     </div>
                 {% endif %}
+              </div>
             {% endfor %}
        
     </div>
