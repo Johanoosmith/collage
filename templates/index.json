@@ -525,7 +525,7 @@
           "type": "Tesimonialss",
           "settings": {
             "image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
-            "review": "<p>Testing Testing Testing Testing Testing.<\/p>"
+            "review": "<p><strong>Testing Testing Testing Testing Testing.<\/strong><\/p>"
           }
         },
         "b41f7154-edfc-426d-a503-bb00c78515b1": {
