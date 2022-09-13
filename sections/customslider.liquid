@@ -40,11 +40,7 @@
                     <div class="other-block-images"><img src="{{ block.settings.image | img_url: 'large' }}" id="hero-header" class="relative z-0"/>
                     </div>
                 {% endif %}
-                  {% if block.settings.customtext != blank %}
-                        <div class="commment">
-                       {{ block.settings.customtext}}
-                        </div>
-                    {% endif %}
+                 
                 </div>
                 {% endif %}
            {% endfor %}
@@ -105,12 +101,7 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
-        },
-           {
-            "type":"text",
-            "id":"customtext",
-            "label":"Comment"
-        }
+          }
         ]
       }
 ],
