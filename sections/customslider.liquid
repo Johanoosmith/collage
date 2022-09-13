@@ -40,8 +40,11 @@
                     <div class="other-block-images"><img src="{{ block.settings.image | img_url: 'large' }}" id="hero-header" class="relative z-0"/>
                     </div>
                 {% endif %}
-                    <a href="{{ section.settings.link }}" class="button">{{ section.settings.linktext }}</a>
-
+                  {% if block.settings.link != blank %}
+                        <div class="button">
+                       <a href="{{ section.settings.link }}" class="button">{{ section.settings.linktext }}</a>
+                        </div>
+                    {% endif %}
                 </div>
                 {% endif %}
            {% endfor %}
