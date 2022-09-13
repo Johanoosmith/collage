@@ -3,29 +3,68 @@
 {{ 'jquery.min.js' | asset_url | script_tag }}
   {{ 'owl.carousel.js' | asset_url | script_tag }}
 <section class="imagesslider">
-<div class="container testing">
-  <div id="owl-demo" class="owl-carousel owl-theme">
-
-      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage1.jpg?15259394755119812233" alt="The Last of us"></div>
-      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage2.jpg?15259394755119812233" alt="GTA V"></div>
-      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage3.jpg?15259394755119812233" alt="Mirror Edge"></div>
-      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage1.jpg?15259394755119812233" alt="The Last of us"></div>
-      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage2.jpg?15259394755119812233" alt="GTA V"></div>
-      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage3.jpg?15259394755119812233" alt="Mirror Edge"></div>
-    <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage1.jpg?15259394755119812233" alt="The Last of us"></div>
-      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage2.jpg?15259394755119812233" alt="GTA V"></div>
-      <div class="item"><img src="https://cdn.shopify.com/s/files/1/1334/7245/t/1/assets/fullimage3.jpg?15259394755119812233" alt="Mirror Edge"></div>
+<div class="container">
+    <div class="heading-section"> {% if section.settings.section-heading != blank %}
+        <h2 class="section-heading" style="text-align: center;">{{ section.settings.section-heading }}</h2>
+        {% endif %} 
+    </div>
+    <div id="owl-demo-testimonial" class="owl-carousel owl-theme">
+        <div>
+            {% for block in section.blocks %}
+                {% if block.settings.image != blank %}
+                <div id="hero-header" class="relative z-0" style="height: 50px; background-size: cover; background-position: center ;background-image: url('{{ block.settings.image | image_url: width: 50, crop: "center" }}');">
+                </div>
+                {% endif %}
+                {% if block.settings.review != blank %}
+                    <div class="description">
+                            {{ block.settings.review}}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
   </div>
 </section>
 <!-- Welcome section ends -->
 {% schema %}
 {
-"name": "Section name",
-"settings": [],
+"name": "Testimonial slider",
+"settings": [
+    {
+        "id": "section-heading",
+        "type": "text",
+        "label": "Heading "
+        }
+],
+"max_blocks": 5,
+"blocks": [{
+    "type": "Tesimonialss",
+    "name": "Testimonial",
+    "settings": [{
+          "type": "header",
+          "content": "Testimonial Image"
+       },
+       {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+       },
+       {
+        "type":"richtext",
+        "id":"review",
+        "label":"reviews"
+    }
+    ]
+ }
+],
 "presets": [
 {
-"name": "Custom slider"
+"name": "Testimonial slider",
+"blocks": [
+    {
+      "type": "Tesimonialss"
+    }
+  ]
 
 }
 ]
@@ -35,12 +74,12 @@
 {% endstylesheet %}
 {% javascript %}
     jQuery(document).ready(function() {
-      jQuery("#owl-demo").owlCarousel({
+      jQuery("#owl-demo-testimonial").owlCarousel({
 
-      loop:true,
-    margin:10,
-    nav:true,
-
+        loop:true,
+        margin:10,
+        nav:true,
+        items:1
 
 
       });
