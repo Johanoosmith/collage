@@ -14,10 +14,7 @@
                 {% if block.settings.image != blank %}
                 <div id="hero-header" class="relative z-0" style="background-image: url('{{ block.settings.image | image_url }}');">
                 </div>
-{% assign image_blocks = section.blocks | where: 'type', 'image' %}
-{% for block in image_blocks %}
-  <!-- Stuff -->
-{% endfor %}                {% endif %}
+                {% endif %}
                 {% if block.settings.authername != blank %}
                     <div class="auther-name">
                             {{ block.settings.authername}}
