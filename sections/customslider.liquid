@@ -12,10 +12,7 @@
         <div>
             {% for block in section.blocks %}
                 {% if block.settings.image != blank %}
-                <div id="hero-header" class="relative z-0" style="background-image: url('{{ block.settings.image | image_url }}');">
-                </div>
-<img src="{{ block.settings.image | img_url: 'small' }}" class="img"/>
-
+                  <img src="{{ block.settings.image | img_url: 'mediam' }}" id="hero-header" class="relative z-0"/>
                 {% endif %}
                 {% if block.settings.authername != blank %}
                     <div class="auther-name">
